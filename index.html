@@ -413,7 +413,7 @@
 
         try {
             // Send request to FastAPI backend
-            const response = await fetch('http://localhost:8000/chat', {
+            const response = await fetch('/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ message: text, session_id: currentSessionId })
@@ -440,7 +440,7 @@
     const newSessionBtn = document.getElementById('new-session-btn');
     if (newSessionBtn) {
         newSessionBtn.addEventListener('click', async () => { 
-            await fetch('http://localhost:8000/clear', { 
+            await fetch('/clear', { 
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ session_id: currentSessionId })

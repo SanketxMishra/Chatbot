@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ask DIYA - Future Pathways</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline": "#76767f",
+              "on-surface-variant": "#45464e",
+              "surface-container-high": "#e7e8e9",
+              "surface-container-low": "#f3f4f5",
+              "inverse-on-surface": "#f0f1f2",
+              "surface-dim": "#d9dadb",
+              "on-background": "#191c1d",
+              "primary": "#00020e",
+              "on-primary-fixed": "#0b1a3d",
+              "primary-fixed-dim": "#b9c5f2",
+              "on-surface": "#191c1d",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#515d84",
+              "error": "#ba1a1a",
+              "background": "#f8f9fa",
+              "tertiary-container": "#390f00",
+              "error-container": "#ffdad6",
+              "on-secondary-container": "#eee9ff",
+              "on-tertiary-fixed-variant": "#7f2b00",
+              "tertiary-fixed-dim": "#ffb599",
+              "secondary-fixed": "#e4dfff",
+              "on-secondary-fixed-variant": "#3c03dd",
+              "on-error-container": "#93000a",
+              "secondary-fixed-dim": "#c6bfff",
+              "outline-variant": "#c6c6cf",
+              "on-primary": "#ffffff",
+              "surface-container": "#edeeef",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#ffdbce",
+              "surface-container-lowest": "#ffffff",
+              "surface-variant": "#e1e3e4",
+              "on-tertiary-container": "#e15a19",
+              "on-secondary-fixed": "#160066",
+              "surface-bright": "#f8f9fa",
+              "inverse-surface": "#2e3132",
+              "surface": "#f8f9fa",
+              "on-primary-container": "#7784ad",
+              "on-error": "#ffffff",
+              "primary-container": "#0d1b3e",
+              "on-tertiary-fixed": "#370e00",
+              "secondary-container": "#6249ff",
+              "secondary": "#4925e7",
+              "inverse-primary": "#b9c5f2",
+              "surface-container-highest": "#e1e3e4",
+              "primary-fixed": "#dbe1ff",
+              "tertiary": "#080100",
+              "on-primary-fixed-variant": "#39456b",
+              "teal-accent": "#2dd4bf",
+              "orange-accent": "#fb923c"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1.25rem", "2xl": "1.5rem", "3xl": "2.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass-header {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .bubbly-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-[#FDFEFF] font-body text-on-surface antialiased overflow-hidden">
+<!-- TopNavBar Shell -->
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl flex justify-between items-center px-8 h-16 w-full shadow-sm border-b border-slate-100">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-teal-accent rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<span class="text-xl font-extrabold tracking-tighter text-slate-950 font-manrope">Ask DIYA</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 hover:text-teal-accent transition-colors font-bold text-sm" href="#">My Path</a>
+<a class="text-slate-500 hover:text-teal-accent transition-colors font-bold text-sm" href="#">Exploration</a>
+<a class="text-slate-500 hover:text-teal-accent transition-colors font-bold text-sm" href="#">Events</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-slate-400 hover:text-teal-accent p-2 rounded-full transition-all" data-icon="notifications">notifications</button>
+<div class="h-10 w-10 rounded-full border-2 border-teal-accent/20 p-0.5">
+<div class="h-full w-full rounded-full bg-slate-200 overflow-hidden">
+<img alt="Student profile" class="w-full h-full object-cover" data-alt="high school student smiling, portrait, bright lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGTOaILhFitpR_64PZVaEeqEkZu6oYG1fyCSWr0IJQlNy0FGbTzW0GpxQ1yzY8PxTZl_QLLpWOZN89Xu_Fz8ZvclImS02IlVU92PYavfr-VwqVD2aT6s9s5OOnqsNRZPA5y8OXTqXhOfbk4oGafZ0ueCHtWNSJ--USza6nj05GnnSsKPh8FBhYNwcyBvsDr5FQi1DgQZ45ADDaHrqSnbanBd1hQv7suHhMJsGVLrqlmoSMRQGbpM_-9aLUMF2Zn4nUIyqlk-O0EJo"/>
+</div>
+</div>
+</div>
+</header>
+<div class="flex h-screen pt-16">
+<!-- SideNavBar Shell -->
+<aside class="hidden lg:flex flex-col p-6 gap-2 border-r border-slate-50 h-screen w-72 fixed left-0 top-16 bg-white font-plus-jakarta-sans text-sm font-semibold">
+<div class="px-2 py-4 mb-4">
+<div class="bg-orange-accent/10 rounded-2xl p-4 flex items-center gap-3 border border-orange-accent/20">
+<div class="w-10 h-10 rounded-xl bg-orange-accent flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<div>
+<h2 class="text-sm font-extrabold text-slate-900 leading-tight">Grade 11</h2>
+<p class="text-[11px] text-orange-accent font-bold">Goal: Discover Major</p>
+</div>
+</div>
+</div>
+<button id="new-session-btn" class="flex items-center justify-center gap-2 bg-teal-accent text-white py-4 px-4 rounded-2xl font-extrabold mb-6 shadow-lg shadow-teal-accent/20 hover:scale-[1.02] active:scale-95 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="add_circle">add_circle</span>
+            New Session
+        </button>
+<nav class="flex-1 space-y-2">
+<div class="bg-slate-50 text-teal-accent rounded-2xl p-4 flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-xl" data-icon="chat_bubble" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+<span>Active Chat</span>
+</div>
+<div class="text-slate-400 hover:bg-slate-50 hover:text-slate-600 rounded-2xl p-4 flex items-center gap-3 cursor-pointer transition-all">
+<span class="material-symbols-outlined text-xl" data-icon="auto_awesome_motion">auto_awesome_motion</span>
+<span>Past Journeys</span>
+</div>
+<div class="text-slate-400 hover:bg-slate-50 hover:text-slate-600 rounded-2xl p-4 flex items-center gap-3 cursor-pointer transition-all">
+<span class="material-symbols-outlined text-xl" data-icon="favorite">favorite</span>
+<span>My Saved Goals</span>
+</div>
+<div class="text-slate-400 hover:bg-slate-50 hover:text-slate-600 rounded-2xl p-4 flex items-center gap-3 cursor-pointer transition-all">
+<span class="material-symbols-outlined text-xl" data-icon="route">route</span>
+<span>My Career Map</span>
+</div>
+</nav>
+<div class="border-t border-slate-50 pt-6 mt-auto">
+<div class="text-slate-400 hover:text-slate-600 p-3 flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined text-xl" data-icon="help">help</span>
+<span>Support</span>
+</div>
+</div>
+</aside>
+<!-- Main Chat Canvas -->
+<main class="flex-1 flex flex-col lg:ml-72 bg-[#F9FBFC] h-full relative">
+<!-- Chat Header -->
+<div class="flex items-center justify-between px-8 py-4 border-b border-slate-100 bg-white/60 glass-header sticky top-0 z-40">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="w-12 h-12 rounded-2xl overflow-hidden bg-teal-accent/10">
+<img alt="Counselor Diya" class="w-full h-full object-cover" data-alt="young friendly female counselor with a kind smile, looking at camera, modern office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGHCCNlSub8GJVRO6Iq7Hm_wkWfY-ml5XhG_wwzLhAu6nxhZWYTIBYQ1A3XU-MpLdwKW7mwA7_ktkU8XAzY7D_nCbAjeI85hKgvuZTHZl45LrDfwWMbk9Ejft-zD0tMwy_o6VqHP-Kja4d8D8PcCHFeNSVSPjk7r3k-PPiQJvcRtOAHK64vDzEti4H-bm32ExS1zBhRxW-yOCwGzrUe_XFqYesE5Rix16APTyLiFqDXw_84nBuCYEvjRwoXN7kPRDm5aLMyV29yxk"/>
+</div>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-teal-accent rounded-full border-2 border-white shadow-sm flex items-center justify-center">
+<div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+</div>
+</div>
+<div>
+<h1 class="font-headline font-extrabold text-lg text-slate-900 tracking-tight">Diya <span class="text-xs font-bold text-teal-accent ml-2 uppercase tracking-wider">Your Mentor</span></h1>
+<p class="text-xs text-slate-400 font-bold">Helping you find your spark! ✨</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="bg-white border border-slate-100 text-slate-600 px-5 py-2.5 rounded-xl text-sm font-bold shadow-sm hover:bg-slate-50 active:scale-95 transition-all">
+                    Finish Chat
+                </button>
+</div>
+</div>
+<!-- Messages Area -->
+<div id="chat-container" class="flex-1 overflow-y-auto p-8 space-y-8 no-scrollbar pb-40">
+<div class="flex justify-center">
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-slate-400 bg-slate-100 px-4 py-1.5 rounded-full">Chatting Today</span>
+</div>
+<!-- Diya Message -->
+<div class="flex gap-4 max-w-2xl group">
+<div class="w-10 h-10 rounded-xl overflow-hidden shrink-0 mt-1 bg-teal-accent/10 border border-teal-accent/5">
+<img alt="Diya" class="w-full h-full object-cover" data-alt="thumbnail avatar of a kind female counselor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg-oRX_zTpX6tqgRvRY6q_8aM3Gbi3W7tGd4fi8cUZYVodwNoZh_oWEf6zvfQ7kWxuLVlzYzG_3GbKvalIyV5Bm9R7jbDv4BLvmYnFgTu1CKqzVPiBwiDxawpO7cmdFPLChFtvUTkny2PsUTiF4yUBeX7b8s1Eqxk94SMMvb_z9Ki-dygft2zc107vl-DIx1Su1atDPdgwqLq9FyMn7aPhF6WDNX2lkRpwYbwoBunSG-_6qwqtQSyHYEF7GpH-9SGpmRxffh40ydE"/>
+</div>
+<div class="space-y-2">
+<div class="bg-white p-6 rounded-[2rem] rounded-tl-none bubbly-shadow border border-slate-100">
+<p class="text-slate-800 leading-relaxed font-medium">Hey Alex! You're doing amazing! 🌟 I just looked at your interest in <span class="text-orange-accent font-bold">Graphic Design</span>. Did you know there's a cool summer program called the <span class="text-teal-accent font-extrabold">Creative Future Workshop</span>?</p>
+<p class="mt-3 text-slate-800 leading-relaxed font-medium">It looks like a perfect match for your style! Want to see how to join?</p>
+</div>
+<div class="flex items-center gap-2 px-1">
+<span class="text-[10px] text-slate-300 font-bold">11:05 AM</span>
+<span class="px-2 py-0.5 bg-orange-accent/10 text-orange-accent text-[9px] font-extrabold rounded-full">EXCITING TIP</span>
+</div>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex gap-4 max-w-2xl ml-auto flex-row-reverse group">
+<div class="w-10 h-10 rounded-xl overflow-hidden shrink-0 mt-1 bg-teal-accent flex items-center justify-center">
+<span class="text-[11px] text-white font-extrabold">AL</span>
+</div>
+<div class="space-y-2 text-right">
+<div class="bg-teal-accent text-white p-6 rounded-[2rem] rounded-tr-none shadow-lg shadow-teal-accent/20">
+<p class="leading-relaxed font-bold">Wow, that sounds so cool! I was a bit nervous because I don't have a huge portfolio yet. Do you think I still have a chance? 🎨</p>
+</div>
+<span class="text-[10px] text-slate-300 font-bold px-1">11:06 AM</span>
+</div>
+</div>
+<!-- Diya Insight Card -->
+<div class="flex gap-4 max-w-3xl group">
+<div class="w-10 h-10 rounded-xl overflow-hidden shrink-0 mt-1 bg-teal-accent/10">
+<img alt="Diya" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxrBXgok02dpqFRr8Ov2D8r8jlef0FE_oV_o3WbuzpjhTkYC-SOb_710ZdhcjjCYHsdQRafWjXdwRLxKpABL5BcAHcwBIg_P0xh9-1YJnZ8AO62Ka65sH9QIC83D-fG6SlftD3Eb3K7WASAi2Lpi0kiT_o_MmZPTy8FXJkWHnnZgSmVd5MMuyH57t-dCqVYRy60Qjtq4GjX5vOCUPU3LpFMfPBWdh3jgA02gNA-m1xmHr0SfTz43kECcskQuwU43h_hqA1zKZ_Stg"/>
+</div>
+<div class="space-y-3 w-full">
+<div class="bg-white p-1 rounded-[2.5rem] bubbly-shadow border border-slate-100 overflow-hidden">
+<div class="bg-gradient-to-br from-white to-slate-50 p-6 rounded-[2.2rem]">
+<div class="flex items-start justify-between mb-4">
+<div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-orange-accent text-white text-[10px] font-extrabold rounded-full mb-3 uppercase tracking-wider">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span> Milestone Unlocked
+                                    </span>
+<h3 class="font-headline font-extrabold text-slate-900 text-2xl leading-tight">Match Found: Design Stars!</h3>
+</div>
+<div class="bg-teal-accent/10 p-3 rounded-2xl">
+<span class="material-symbols-outlined text-teal-accent text-3xl" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white p-5 rounded-3xl border border-slate-100 flex flex-col items-center justify-center">
+<p class="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1">Your Match</p>
+<p class="text-3xl font-headline font-black text-teal-accent">92%</p>
+</div>
+<div class="bg-white p-5 rounded-3xl border border-slate-100 flex flex-col items-center justify-center">
+<p class="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1">Top Strength</p>
+<p class="text-sm font-extrabold text-slate-900 text-center">Passion &amp; Creativity</p>
+</div>
+</div>
+<p class="mt-5 text-sm text-slate-600 font-medium italic text-center">"Your doodles and class projects show huge potential! Don't let a small portfolio hold you back—they love seeing how you think!"</p>
+</div>
+</div>
+<span class="text-[10px] text-slate-300 font-bold px-1">11:07 AM</span>
+</div>
+</div>
+</div>
+<!-- Floating Input Area -->
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[95%] max-w-4xl z-50">
+<div class="bg-white rounded-[2.5rem] shadow-[0_20px_60px_rgba(45,212,191,0.15)] p-2.5 pr-4 flex items-center gap-3 border border-slate-100">
+<div class="flex items-center gap-1 pl-2">
+<button class="w-12 h-12 flex items-center justify-center text-slate-400 hover:bg-slate-50 hover:text-teal-accent rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="image">image</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center text-slate-400 hover:bg-slate-50 hover:text-teal-accent rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="mood">mood</span>
+</button>
+</div>
+<div class="flex-1">
+<input id="chat-input" class="w-full bg-transparent border-none focus:ring-0 text-slate-800 font-medium placeholder:text-slate-300 py-3 text-sm" placeholder="Ask Diya anything about your future..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button id="send-button" class="bg-teal-accent text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg shadow-teal-accent/30 hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-2xl" data-icon="send" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="flex justify-center gap-4 mt-5">
+<button class="flex items-center gap-2 px-4 py-2 bg-white rounded-full text-[11px] font-extrabold text-slate-500 border border-slate-100 hover:border-teal-accent/30 hover:text-teal-accent transition-all shadow-sm">
+<span class="w-2 h-2 rounded-full bg-teal-accent"></span> Show my Strengths
+                </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-white rounded-full text-[11px] font-extrabold text-slate-500 border border-slate-100 hover:border-orange-accent/30 hover:text-orange-accent transition-all shadow-sm">
+<span class="w-2 h-2 rounded-full bg-orange-accent"></span> Colleges for Design
+                </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-white rounded-full text-[11px] font-extrabold text-slate-500 border border-slate-100 hover:border-slate-300 hover:text-slate-700 transition-all shadow-sm">
+<span class="w-2 h-2 rounded-full bg-slate-300"></span> My Path So Far
+                </button>
+</div>
+</div>
+</main>
+<!-- Right Side - Context Panel -->
+<aside class="hidden xl:flex flex-col w-80 bg-white border-l border-slate-50 p-6 overflow-y-auto no-scrollbar">
+<h2 class="font-headline font-black text-slate-900 text-xs uppercase tracking-[0.2em] mb-8">Your Journey Tools</h2>
+<div class="space-y-8">
+<!-- Recommended Resource Card -->
+<div class="bg-white rounded-[2rem] overflow-hidden group cursor-pointer border border-slate-100 hover:border-teal-accent transition-all shadow-sm">
+<div class="h-36 bg-slate-200 relative overflow-hidden">
+<img alt="Design inspiration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="vibrant neon art workspace with tablets and creative mess, high quality digital photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApoWI651i-R-kqANT8NSCo1nF7t86vHEt_IrPILzkxx7QSX4_OT5up9jYlc232WRyPZWX0iNdrOC8WEsJAmvlSsivVGcjG9y4dbigR8vidyGMsJ7kHtxvrg7Nos1ehH--bBPoTX1ZDGlpxaEOLhxyLq-us8mDkKh2-HWKmWBXMWSso1EaaxTQ3O69C0QArlKz5fikekz-yq7qYmbVcPrMFmUoP5meu5ls4Oh4e1qVbmWS9j19h9SwLEbCFYFlhiL7-JbVywY2-AD4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+<span class="absolute bottom-4 left-5 text-white text-[10px] font-black px-3 py-1 bg-white/20 backdrop-blur-md rounded-full uppercase tracking-wider">Must Read</span>
+</div>
+<div class="p-5">
+<h4 class="font-extrabold text-slate-900 text-sm mb-1 leading-tight">Starting Your Design Portfolio 🎨</h4>
+<p class="text-[11px] text-slate-400 font-bold">5 min read • By Diya</p>
+</div>
+</div>
+<!-- Active Tasks -->
+<div class="bg-[#F9FBFC] p-6 rounded-[2rem] border border-slate-100">
+<h4 class="text-xs font-black text-slate-900 mb-5 flex items-center justify-between tracking-wider">
+                    NEXT STEPS
+                    <span class="bg-teal-accent text-white px-2.5 py-0.5 rounded-full text-[9px] font-black">2 TO DO</span>
+</h4>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 group">
+<div class="w-6 h-6 rounded-lg border-2 border-slate-200 group-hover:border-teal-accent flex items-center justify-center shrink-0 transition-all cursor-pointer"></div>
+<span class="text-xs text-slate-600 font-bold">Upload 3 favorite drawings</span>
+</li>
+<li class="flex items-center gap-3 group">
+<div class="w-6 h-6 rounded-lg bg-teal-accent flex items-center justify-center shrink-0 shadow-sm shadow-teal-accent/20">
+<span class="material-symbols-outlined text-[14px] text-white font-black" data-icon="check">check</span>
+</div>
+<span class="text-xs text-slate-400 font-bold line-through">Check out summer workshop</span>
+</li>
+</ul>
+</div>
+<!-- Future Roadmap Preview -->
+<div class="relative rounded-[2rem] bg-slate-900 p-8 overflow-hidden shadow-xl">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 bg-teal-accent/30 rounded-full blur-3xl"></div>
+<div class="absolute -left-6 -top-6 w-32 h-32 bg-orange-accent/20 rounded-full blur-3xl"></div>
+<span class="inline-block px-3 py-1 bg-white/10 text-white text-[9px] font-black rounded-full mb-3 tracking-[0.1em] uppercase">Future Goal</span>
+<h4 class="text-white font-headline font-black text-xl mb-6">Your Dream Path</h4>
+<div class="space-y-5 relative">
+<div class="flex items-center gap-4">
+<div class="w-2 h-12 rounded-full bg-teal-accent"></div>
+<div>
+<p class="text-white text-[12px] font-black">Discovery Phase</p>
+<p class="text-teal-accent/80 text-[10px] font-bold">Done! You found your passion.</p>
+</div>
+</div>
+<div class="flex items-center gap-4 opacity-50">
+<div class="w-2 h-12 rounded-full bg-white/20"></div>
+<div>
+<p class="text-white text-[12px] font-black">Skills Building</p>
+<p class="text-white/40 text-[10px] font-bold">Up Next: 11th Grade Summer</p>
+</div>
+</div>
+</div>
+<button class="mt-8 w-full py-3.5 bg-white text-slate-900 text-xs font-black rounded-2xl hover:scale-[1.02] active:scale-95 transition-all shadow-lg">
+                    Full Roadmap
+                </button>
+</div>
+</div>
+</aside>
+</div>
+
+<script>
+    const chatContainer = document.getElementById('chat-container');
+    const chatInput = document.getElementById('chat-input');
+    const sendButton = document.getElementById('send-button');
+    let currentSessionId = crypto.randomUUID();
+
+    function getCurrentTime() {
+        return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+
+    function addUserMessage(message) {
+        const time = getCurrentTime();
+        const html = `
+        <div class="flex gap-4 max-w-2xl ml-auto flex-row-reverse group">
+            <div class="w-10 h-10 rounded-xl overflow-hidden shrink-0 mt-1 bg-teal-accent flex items-center justify-center">
+                <span class="text-[11px] text-white font-extrabold">ME</span>
+            </div>
+            <div class="space-y-2 text-right">
+                <div class="bg-teal-accent text-white p-6 rounded-[2rem] rounded-tr-none shadow-lg shadow-teal-accent/20">
+                    <p class="leading-relaxed font-bold">${message}</p>
+                </div>
+                <span class="text-[10px] text-slate-300 font-bold px-1">${time}</span>
+            </div>
+        </div>`;
+        chatContainer.insertAdjacentHTML('beforeend', html);
+        scrollToBottom();
+    }
+
+    function addDiyaMessage(message) {
+        const time = getCurrentTime();
+        // Convert some basic markdown to HTML (like newlines and bold)
+        const formattedMessage = message.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
+        
+        const html = `
+        <div class="flex gap-4 max-w-2xl group">
+            <div class="w-10 h-10 rounded-xl overflow-hidden shrink-0 mt-1 bg-teal-accent/10 border border-teal-accent/5">
+                <img alt="Diya" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg-oRX_zTpX6tqgRvRY6q_8aM3Gbi3W7tGd4fi8cUZYVodwNoZh_oWEf6zvfQ7kWxuLVlzYzG_3GbKvalIyV5Bm9R7jbDv4BLvmYnFgTu1CKqzVPiBwiDxawpO7cmdFPLChFtvUTkny2PsUTiF4yUBeX7b8s1Eqxk94SMMvb_z9Ki-dygft2zc107vl-DIx1Su1atDPdgwqLq9FyMn7aPhF6WDNX2lkRpwYbwoBunSG-_6qwqtQSyHYEF7GpH-9SGpmRxffh40ydE"/>
+            </div>
+            <div class="space-y-2">
+                <div class="bg-white p-6 rounded-[2rem] rounded-tl-none bubbly-shadow border border-slate-100">
+                    <p class="text-slate-800 leading-relaxed font-medium">${formattedMessage}</p>
+                </div>
+                <div class="flex items-center gap-2 px-1">
+                    <span class="text-[10px] text-slate-300 font-bold">${time}</span>
+                </div>
+            </div>
+        </div>`;
+        chatContainer.insertAdjacentHTML('beforeend', html);
+        scrollToBottom();
+    }
+
+    function scrollToBottom() {
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+
+    async function sendMessage() {
+        const text = chatInput.value.trim();
+        if (!text) return;
+
+        // Add user message to UI
+        addUserMessage(text);
+        chatInput.value = '';
+
+        try {
+            // Send request to FastAPI backend
+            const response = await fetch('http://localhost:8000/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: text, session_id: currentSessionId })
+            });
+
+            if (!response.ok) throw new Error('API Error');
+
+            const data = await response.json();
+            // Add Diya response to UI
+            addDiyaMessage(data.response);
+
+        } catch (error) {
+            console.error("Error:", error);
+            addDiyaMessage("Sorry, I'm having trouble connecting to my brain right now! 😔");
+        }
+    }
+
+    sendButton.addEventListener('click', sendMessage);
+    chatInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') sendMessage();
+    });
+
+    // Handle "New Session"
+    const newSessionBtn = document.getElementById('new-session-btn');
+    if (newSessionBtn) {
+        newSessionBtn.addEventListener('click', async () => { 
+            await fetch('http://localhost:8000/clear', { 
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ session_id: currentSessionId })
+            }); 
+            currentSessionId = crypto.randomUUID();
+            const children = Array.from(chatContainer.children);
+            children.forEach(child => {
+                if (!child.querySelector('.bg-slate-100')) {
+                    child.remove();
+                }
+            });
+            addDiyaMessage("Hi! It's a brand new session. How can I help you today? ✨");
+        });
+    }
+
+    // Purely local initialization when the page loads
+    window.addEventListener('DOMContentLoaded', async () => { await fetch('http://localhost:8000/clear', { method: 'POST' }); 
+        // Remove hardcoded placeholder chats
+        const children = Array.from(chatContainer.children);
+        children.forEach(child => {
+            if (!child.querySelector('.bg-slate-100')) {
+                child.remove();
+            }
+        });
+        
+        // Show a fresh greeting
+        addDiyaMessage("Hi! It's a brand new session. How can I help you today? ✨");
+    });
+</script>
+</body></html>
+
